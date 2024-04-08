@@ -62,8 +62,6 @@ function initSelectButtonListeners() {
         firstSelectedButton.classList.remove("selected");
         firstSelectedButton = null;
       }
-
-      console.log("buttonsRemaining", document.querySelectorAll("button"));
     });
   });
 }
