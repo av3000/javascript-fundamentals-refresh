@@ -1,8 +1,13 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import ESLintPlugin from "eslint-webpack-plugin";
+
+// TODO: Add plugins for extra efficiency
+// https://github.com/webpack-contrib/mini-css-extract-plugin
+// https://github.com/webpack-contrib/compression-webpack-plugin
 
 export default {
-  entry: path.join(__dirname, "src/index.js"),
+  entry: path.join(__dirname, "./index.js"),
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
@@ -10,12 +15,20 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js/,
-        exclude: /(node_modules)/,
-        use: ["babel-loader", "eslint-loader"],
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
+        include: [path.resolve(__dirname, "assets/css")],
         use: ["style-loader", "css-loader"],
       },
       {
@@ -33,14 +46,21 @@ export default {
       template: path.join(__dirname, "index.html"),
       favicon: "assets/img/javascript-js.svg",
     }),
+    new ESLintPlugin({
+      extensions: ["js"],
+      emitError: true,
+      emitWarning: true,
+      failOnError: false,
+      failOnWarning: false,
+    }),
   ],
   stats: "minimal",
   devtool: "source-map",
   mode: "development",
   devServer: {
     open: false,
-    contentBase: "./dist",
-    inline: true,
+    compress: true,
+    historyApiFallback: true, // Support for client-side routing
     port: 4000,
   },
 };
