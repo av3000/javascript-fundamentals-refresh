@@ -6,11 +6,27 @@
     <title>JavaScript Fundamentals Refresh</title>
   </head>
   <body>
-    <header>
+    <div id="root">
       <h1>JavaScript Fundamentals Refresh</h1>
-    </header>
-    <main>
-      <div id="app"></div>
-    </main>
+      <nav id="main-nav" class="sidenav">
+        <a href="/" data-link onclick="route(event)">Home</a>
+        <a href="/country-match" data-link onclick="route(event)"
+          >Country Match</a
+        >
+        <a href="/linked-list-intersection" data-link onclick="route(event)"
+          >Linked List Intersection</a
+        >
+        <a href="/number-of-islands" data-link onclick="route(event)"
+          >Number of Islands</a
+        >
+        <a href="/find-pivot-index" data-link onclick="route(event)"
+          >Find Pivot Index</a
+        >
+        <a href="/category-tree" data-link onclick="route(event)"
+          >Category Tree</a
+        >
+      </nav>
+      <main id="main-page"></main>
+    </div>
   </body>
 </html>
