@@ -1,16 +1,20 @@
+// TODO: Add plugins for extra efficiency
+// https://webpack.js.org/plugins/commons-chunk-plugin/
+// https://github.com/webpack-contrib/mini-css-extract-plugin
+// https://github.com/webpack-contrib/compression-webpack-plugin
+
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 
-// TODO: Add plugins for extra efficiency
-// https://github.com/webpack-contrib/mini-css-extract-plugin
-// https://github.com/webpack-contrib/compression-webpack-plugin
-
 export default {
-  entry: path.join(__dirname, "./index.js"),
+  entry: {
+    main: path.join(__dirname, "index.js"),
+  },
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -30,6 +34,10 @@ export default {
         test: /\.css$/,
         include: [path.resolve(__dirname, "assets/css")],
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -54,13 +62,21 @@ export default {
       failOnWarning: false,
     }),
   ],
-  stats: "minimal",
+  // stats: "minimal",
   devtool: "source-map",
   mode: "development",
   devServer: {
     open: false,
     compress: true,
-    historyApiFallback: true, // Support for client-side routing
+    historyApiFallback: true,
     port: 4000,
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
   },
 };
+
+// static: {
+//   directory: path.join(__dirname, "src"),
+//   publicPath: "/src",
+// },
