@@ -19,3 +19,7 @@ Run
 ```bash
 yarn start
 ```
+
+## Local Tools
+
+- [act cli](https://github.com/nektos/act) - For simulating Github Actions locally. Requires [Docker](https://docs.docker.com/) API
