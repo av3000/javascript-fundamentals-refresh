@@ -14,7 +14,7 @@ export default {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
-    publicPath: "/javascript-fundamentals-refresh/",
+    publicPath: "/",
   },
   module: {
     rules: [
