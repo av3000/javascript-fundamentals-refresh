@@ -16,11 +16,11 @@ const routes = {
     html: `${basePath}/not-found/not-found.html`,
     js: `${basePath}/not-found/not-found.js`,
   },
-  "/": {
+  "/javascript-fundamentals-refresh/": {
     html: `${basePath}/home/home.html`,
     js: null,
   },
-  "/country-match": {
+  "/javascript-fundamentals-refresh/country-match": {
     html: `${basePath}/country-match/country-match.html`,
     js: `${basePath}/country-match/country-match.js`,
   },
