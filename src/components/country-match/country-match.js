@@ -63,7 +63,7 @@ const checkIfGameover = (currentButtons) => {
   if (currentButtons.length === 0) {
     const menu = confirm("You Won! Repeat?");
 
-    return menu ? initApp() : window.route("/");
+    return menu ? initApp() : window.route("/javascript-fundamentals-refresh/");
   }
 };
 

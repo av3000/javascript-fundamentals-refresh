@@ -9,18 +9,20 @@ const route = (event) => {
   }
 };
 
+const basePath = "/javascript-fundamentals-refresh/components";
+
 const routes = {
   404: {
-    html: "./components/not-found/not-found.html",
-    js: "./components/not-found/not-found.js",
+    html: `${basePath}/not-found/not-found.html`,
+    js: `${basePath}/not-found/not-found.js`,
   },
   "/": {
-    html: "./components/home/home.html",
+    html: `${basePath}/home/home.html`,
     js: null,
   },
   "/country-match": {
-    html: "./components/country-match/country-match.html",
-    js: "./components/country-match/country-match.js",
+    html: `${basePath}/country-match/country-match.html`,
+    js: `${basePath}/country-match/country-match.js`,
   },
 };
 
