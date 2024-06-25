@@ -14,7 +14,7 @@ export default {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
-    publicPath: "/",
+    publicPath: "/javascript-fundamentals-refresh/",
   },
   module: {
     rules: [
@@ -52,7 +52,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "index.html"),
-      favicon: "assets/img/javascript-js.svg",
+      favicon: path.join(__dirname, "assets/img/javascript-js.svg"),
     }),
     new ESLintPlugin({
       extensions: ["js"],
@@ -75,8 +75,3 @@ export default {
     },
   },
 };
-
-// static: {
-//   directory: path.join(__dirname, "src"),
-//   publicPath: "/src",
-// },
