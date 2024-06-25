@@ -1,0 +1,1 @@
+{"version":3,"file":"881.bundle.js","mappings":"wIAGA,QAFW,wD","sources":["webpack://fundamentals/./src/components/country-match/country-match.html"],"sourcesContent":["// Module\nvar code = \"<h2>Country Match</h2> <div id=\\\"country-match\\\"></div> \";\n// Exports\nexport default code;"],"names":[],"sourceRoot":""}

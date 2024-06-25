@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfundamentals=self.webpackChunkfundamentals||[]).push([[881],{881:(t,a,n)=>{n.r(a),n.d(a,{default:()=>u});const u='<h2>Country Match</h2> <div id="country-match"></div> '}}]);
+//# sourceMappingURL=881.bundle.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfundamentals=self.webpackChunkfundamentals||[]).push([[917],{917:(e,i,t)=>{t.r(i),t.d(i,{default:()=>l});const l="<div> <h2>Home</h2> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti mollitia quod voluptates iusto, vel necessitatibus ullam maiores, id excepturi rerum, nulla tenetur repellendus. Id dolore deleniti est temporibus cum libero. </p> </div> "}}]);
+//# sourceMappingURL=917.bundle.js.map
